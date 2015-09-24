@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IRT example Application</title>
+  <meta charset="utf-8">
+  <meta name="description" content="IRT example Application">
+  <meta name="author" content="RE">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="libraries/widgets/quiz/css/demo.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>IRT example Application</h1>
+    <h2>Course project for the &quot;Developing Data Products&quot;</h2>
+    <p>RE<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Motivation</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Situation:</p>
+
+<p>A Professor offers a course on Calculus</p>
+
+<p>Problem:</p>
+
+<p>How can Professor find out which students have sufficiently understood the material?</p>
+
+<p>Solution:</p>
+
+<p>Exams!  Students need to take a test with questions on Calculus</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Two Parameter Logistic Model</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Item response theory (<em>IRT</em>) is concerned with accurate test scoring and development of test items. </p>
+
+<p>The Application use ltm package <a href="https://cran.r-project.org/web/packages/ltm/ltm.pdf">https://cran.r-project.org/web/packages/ltm/ltm.pdf</a>.</p>
+
+<p>and Two Parameter Logistic Model:</p>
+
+<p>\[\log\frac{P_i(\theta)}{1 - P_i(\theta)}= \alpha_i(\theta-\beta_i)\],</p>
+
+<p>\(P_i(\theta)\) - probability of Correct Response</p>
+
+<p>\(i\) denotes the item</p>
+
+<p>Parameters:</p>
+
+<ul>
+<li><p>item difficulty parameter: \(\beta_i\)</p></li>
+<li><p>item discrimination parameter: \(\alpha_i\)</p></li>
+<li><p>student ability parameter: \(\theta\)</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Data Set And  Processing</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>On activate the application do with demo data set from table:</p>
+
+<pre><code>##          item1 item2 item3 item4
+## Student1     0     0     0     1
+## Student2     0     1     0     1
+## Student3     0     1     1     1
+## Student4     0     1     1     0
+## Student4     1     1     1     0
+</code></pre>
+
+<p>Data is fantastic, so we  see poor results but nice pictures!!</p>
+
+<p>But... !!!</p>
+
+<p>User can load and reload his own files from local computer.</p>
+
+<p>User can choose nesessary parameters of his file *.csv</p>
+
+<p>You can try the application here:</p>
+
+<p>(<a href="https://klenar.shinyapps.io/IRTexample">https://klenar.shinyapps.io/IRTexample</a>)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Results</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz quiz-multiple well" data-individual>
+  <p>What do you mind the application show:</p>
+
+<ol>
+<li><p><em>data set</em></p></li>
+<li><p><em>results of Descriptive Analyses of data set (Student&#39;s Test Results)</em></p></li>
+<li><p><em>plot Item Characteristic Curves</em></p></li>
+<li><p><em>ability estimates</em></p></li>
+<li><p><em>fit of model objects (summary)</em></p></li>
+<li><p>Mars&#39; surface</p></li>
+</ol>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-hint">
+  <p>You just see some words</p>
+
+</div>
+<div class="quiz-explanation">
+  <p>One cannot embrace the unembraceable</p>
+
+</div>
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Motivation'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Two Parameter Logistic Model'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Data Set And  Processing'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Results'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+<script src="libraries/widgets/quiz/js/jquery.quiz.js"></script>
+<script src="libraries/widgets/quiz/js/mustache.min.js"></script>
+<script src="libraries/widgets/quiz/js/quiz-app.js"></script>
+
+  <script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
